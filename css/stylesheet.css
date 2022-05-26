@@ -1,3 +1,7 @@
+:root {
+    --footer-height: 4rem;
+}
+
 .header-container {
     background-color:rgb(247, 247, 247);
     box-shadow: 0 0 15px rgba(129, 129, 129, 0.2);
@@ -19,7 +23,7 @@
 
 .header-container .nav-link {
     margin: 0 10px;
-    color: #777;
+    color: #999;
     text-transform: capitalize;
     display: inline-block;
     margin: 0;
@@ -37,7 +41,7 @@
 }
 
 .header-container .nav-link.active {
-    font-weight: 400;
+    color: #333;
 }
 
 .header-container .nav-link:after {
@@ -78,6 +82,8 @@
 }
 
 body {
+    position: relative;
+    min-height: 100vh;
     background-color: #e6e6e6;
 }
 
@@ -85,8 +91,9 @@ body {
     min-width: min-content;
     justify-content: center;
     align-items: center;
-
+    padding-bottom: var(--footer-height);
 }
+
 .carousel-inner > .item > img {
     min-width: 100%;
     width: 100%;
@@ -157,10 +164,18 @@ body {
 }
 
 .footer-container {
+    display: flex;
     background-color: #363636;
-    padding: 30px;
     text-align:center;
     color:gray;
+    height: var(--footer-height);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-text {
+    margin: auto;
 }
 
 .story-img {
