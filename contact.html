@@ -8,7 +8,7 @@
 <body>
     <div class="sticky-top">
         <header class="header-container">
-            <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center">
+            <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center" aria-label="nav-bar">
                 <div class="container-xxl">
                     <div class="navbar-brand d-flex w-50 me-auto header-branding-container">
                         <div class="header-logo-container">
@@ -34,28 +34,151 @@
         
     </div>
     <div class="body-container">
-        <div class="contact-form-container">
-            <form action="https://formsubmit.co/contact@yourselvs.me" method="POST" data-toggle="validator" role="form">
-                <div class="mb-3">
-                    <label for="InputName" class="form-label">What should I call you?</label>
-                    <input type="text" class="form-control" id="InputName" name="Name" placeholder="Name" required>
-                </div>
-                <div class="mb-3">
-                    <label for="InputEmail" class="form-label">Where can I reach you?</label>
-                    <input type="email" class="form-control" id="InputEmail" name="Email address" aria-describedby="emailHelp" placeholder="Email address" required>
-                </div>
-                <div class="mb-3">
-                    <label for="InputMessage" class="form-label">What's your message?</label>
-                    <textarea id="InputMessage" class="form-control" name="Message" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="btn">
-                    Send
+        <div class="contact-selector-container">
+            <h3>How can we help you today?</h3>
+            <nav class="nav nav-pills flex-column flex-sm-row" aria-label="nav-form-selector">
+                <button class="flex-sm-fill text-sm-center nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
+                    Contact
                 </button>
-                <!-- Formsubmit data below -->
-                <input type="text" name="_honey" style="display:none">
-                <input type="hidden" name="_captcha" value="false">
-            </form>
+                <button class="flex-sm-fill text-sm-center nav-link" id="nav-order-tab" data-bs-toggle="tab" data-bs-target="#nav-order" type="button" role="tab" aria-controls="nav-order" aria-selected="false">
+                    Order
+                </button>
+                <button class="flex-sm-fill text-sm-center nav-link" id="nav-support-tab" data-bs-toggle="tab" data-bs-target="#nav-support" type="button" role="tab" aria-controls="nav-support" aria-selected="false">
+                    Support
+                </button>
+            </nav>
         </div>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+                <div class="contact-form-container">
+                    <form action="https://formsubmit.co/contact@oroprintmd.com" method="POST" data-toggle="validator" role="form" aria-label="contact-form">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="InputName" name="Name" placeholder="Name" required>
+                            <label for="InputName">Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="InputEmail" name="Email address" placeholder="Email address" required>
+                            <label for="InputEmail" class="form-label">Email address</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="tel" class="form-control" id="InputPhone" name="Phone number" placeholder="Phone number (optional)">
+                            <label for="InputPhone" class="form-label">Phone number (optional)</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="InputCompany" name="Company" placeholder="Company (optional)">
+                            <label for="InputCompany" class="form-label">Company (optional)</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <textarea id="InputMessage" class="form-control textarea" name="Message" placeholder="Leave a message here" required></textarea>
+                            <label for="InputMessage" class="form-label">What's your message?</label>
+                        </div>
+                        <button type="submit" class="btn">
+                            Send
+                        </button>
+                        <!-- Formsubmit data below -->
+                        <input type="text" name="_honey" style="display:none">
+                        <input type="hidden" name="_captcha" value="false">
+                    </form>
+                </div>
+            </div>
+            <div class="tab-pane" id="nav-order" role="tabpanel" aria-labelledby="nav-order-tab" tabindex="0">
+                <div class="contact-form-container">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="InputName" name="Name" placeholder="Name" required>
+                        <label for="InputName">Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="InputEmail" name="Email address" placeholder="Email address" required>
+                        <label for="InputEmail" class="form-label">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="tel" class="form-control" id="InputPhone" name="Phone number" placeholder="Phone number (optional)">
+                        <label for="InputPhone" class="form-label">Phone number (optional)</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="InputCompany" name="Company" placeholder="Company (optional)">
+                        <label for="InputCompany" class="form-label">Company (optional)</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="InputAddress" name="Address" placeholder="Address (US only)">
+                        <label for="InputAddress" class="form-label">Address (US only)</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="InputQuantity" name="Number of shirts" placeholder="Number of shirts">
+                        <label for="InputQuantity" class="form-label">Number of shirts</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="InputSizing" name="Sizing" placeholder="What are the sizes for each shirt?">
+                        <label for="InputSizing" class="form-label">
+                            What are the sizes for each shirt?
+                            <span class="form-tooltip">
+                                ex. 3 Small, 8 Medium, 19 Large, 10 X-Large
+                            </span>
+                        </label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="InputColors" name="Fabric colors" placeholder="Fabric color(s)">
+                        <label for="InputColors" class="form-label">What fabric color(s) would you like?</label>
+                    </div>
+                    <div class="mb-3">
+                        <label for="InputImages" class="form-label">
+                            What does your design look like?
+                            <span class="form-tooltip">
+                                Please upload an overall design <strong>and</strong> any individual images.
+                            </span>
+                        </label>
+                        <input type="file" class="form-control" id="InputImages" name="Images" accept="image/*,.pdf" multiple>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <textarea id="InputMessage" class="form-control textarea" name="Message" placeholder="Leave a message here" required></textarea>
+                        <label for="InputMessage" class="form-label">Any additional comments?</label>
+                    </div>
+                    <button type="submit" class="btn">
+                        Send
+                    </button>
+                    <!-- Formsubmit data below -->
+                    <input type="text" name="_honey" style="display:none">
+                    <input type="hidden" name="_captcha" value="false">
+                </div>
+            </div>
+            <div class="tab-pane" id="nav-support" role="tabpanel" aria-labelledby="nav-support-tab" tabindex="0">
+                <div class="contact-form-container">
+                    <form action="https://formsubmit.co/support@oroprintmd.com" method="POST" data-toggle="validator" role="form" aria-label="support-form">
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="InputName" name="Name" placeholder="Name" required>
+                            <label for="InputName">Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="InputEmail" name="Email address" placeholder="Email address" required>
+                            <label for="InputEmail" class="form-label">Email address</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="tel" class="form-control" id="InputPhone" name="Phone number" placeholder="Phone number (optional)">
+                            <label for="InputPhone" class="form-label">Phone number (optional)</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control" id="InputCompany" name="Company" placeholder="Company (optional)">
+                            <label for="InputCompany" class="form-label">Company (optional)</label>
+                        </div>
+                        <div class="form-floating mb-3 order-number">
+                            <input type="number" class="form-control" id="InputOrderNumber" name="Order number" placeholder="Order number" required>
+                            <label for="InputOrderNumber" class="form-label">What is your order number?</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <textarea id="InputMessage" class="form-control textarea" name="Message" placeholder="Leave a message here" required></textarea>
+                            <label for="InputMessage" class="form-label">What's your message?</label>
+                        </div>
+                        <button type="submit" class="btn">
+                            Send
+                        </button>
+                        <!-- Formsubmit data below -->
+                        <input type="text" name="_honey" style="display:none">
+                        <input type="hidden" name="_captcha" value="false">
+                    </form>
+                </div>
+            </div>
+        </div>
+        
     </div>
     <footer class="footer-container">
         <div class="footer-text">

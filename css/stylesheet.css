@@ -182,3 +182,41 @@ body {
     display: flex;
     margin: auto;
 }
+
+.contact-selector-container {
+    width: 1000px;
+    margin: 30px auto 0 auto;
+}
+
+.contact-selector-container h3 {
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.contact-form-container {
+    width: 800px;
+    margin: 30px auto 0 auto;
+}
+
+/* Remove arrows from number input on forms
+/* Chrome, Safari, Edge, Opera */
+.order-number input::-webkit-outer-spin-button,
+.order-number input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.order-number input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.form-tooltip {
+    padding-left: 6px;
+    font-style: italic;
+    color: #999;
+}
+
+.form-floating .textarea {
+    height: 120px;
+}
