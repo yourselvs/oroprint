@@ -4,6 +4,7 @@
     <link href="../css/bootstrap.css" rel="stylesheet" type="text/css"/>
     <script src="../js/bootstrap.js" type="text/javascript"></script>
     <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" media="screen">
+    <script src="https://kit.fontawesome.com/ffd797642a.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="sticky-top">
@@ -37,19 +38,25 @@
         <div class="contact-selector-container">
             <h3>How can we help you today?</h3>
             <nav class="nav nav-pills flex-column flex-sm-row" aria-label="nav-form-selector">
-                <button class="flex-sm-fill text-sm-center nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
-                    Contact
+                <button class="form-button flex-sm-fill text-sm-center nav-link " id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
+                    <i class="fa-regular fa-comments fa-3x form-button-icon"></i>
+                    <h4>Contact</h4>
+                    <div class="form-button-content">Send us your questions and inquiries</div>
                 </button>
-                <button class="flex-sm-fill text-sm-center nav-link" id="nav-order-tab" data-bs-toggle="tab" data-bs-target="#nav-order" type="button" role="tab" aria-controls="nav-order" aria-selected="false">
-                    Order
+                <button class="form-button flex-sm-fill text-sm-center nav-link " id="nav-order-tab" data-bs-toggle="tab" data-bs-target="#nav-order" type="button" role="tab" aria-controls="nav-order" aria-selected="false">
+                    <i class="fa-regular fa-file-lines fa-3x form-button-icon"></i>
+                    <h4>Order</h4>
+                    <div class="form-button-content">Submit an order for review</div>
                 </button>
-                <button class="flex-sm-fill text-sm-center nav-link" id="nav-support-tab" data-bs-toggle="tab" data-bs-target="#nav-support" type="button" role="tab" aria-controls="nav-support" aria-selected="false">
-                    Support
+                <button class="form-button flex-sm-fill text-sm-center nav-link " id="nav-support-tab" data-bs-toggle="tab" data-bs-target="#nav-support" type="button" role="tab" aria-controls="nav-support" aria-selected="false">
+                    <i class="fa-solid fa-headset fa-3x form-button-icon"></i>
+                    <h4>Support</h4>
+                    <div class="form-button-content">Get help with an existing order</div>
                 </button>
             </nav>
         </div>
         <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
                 <div class="contact-form-container">
                     <form action="https://formsubmit.co/contact@oroprintmd.com" method="POST" data-toggle="validator" role="form" aria-label="contact-form">
                         <div class="form-floating mb-3">
@@ -81,7 +88,7 @@
                     </form>
                 </div>
             </div>
-            <div class="tab-pane" id="nav-order" role="tabpanel" aria-labelledby="nav-order-tab" tabindex="0">
+            <div class="tab-pane fade" id="nav-order" role="tabpanel" aria-labelledby="nav-order-tab" tabindex="0">
                 <div class="contact-form-container">
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="InputName" name="Name" placeholder="Name" required>
@@ -124,7 +131,7 @@
                         <label for="InputImages" class="form-label">
                             What does your design look like?
                             <span class="form-tooltip">
-                                Please upload an overall design <strong>and</strong> any individual images.
+                                Please upload images <strong>and</strong> an overall design for how they should fit together.
                             </span>
                         </label>
                         <input type="file" class="form-control" id="InputImages" name="Images" accept="image/*,.pdf" multiple>
@@ -141,7 +148,7 @@
                     <input type="hidden" name="_captcha" value="false">
                 </div>
             </div>
-            <div class="tab-pane" id="nav-support" role="tabpanel" aria-labelledby="nav-support-tab" tabindex="0">
+            <div class="tab-pane fade" id="nav-support" role="tabpanel" aria-labelledby="nav-support-tab" tabindex="0">
                 <div class="contact-form-container">
                     <form action="https://formsubmit.co/support@oroprintmd.com" method="POST" data-toggle="validator" role="form" aria-label="support-form">
                         <div class="form-floating mb-3">
