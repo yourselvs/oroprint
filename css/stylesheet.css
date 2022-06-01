@@ -2,6 +2,7 @@
     --footer-height: 4rem;
     --form-width: 850px;
     --color-header-text: rgb(224, 187, 82);
+    --header-footer-height: 140px;
 }
 
 .header-container {
@@ -88,9 +89,6 @@ body {
     min-height: 100vh;
     background-color: #eeeeee;
     color: #4a4a4a;
-    /* Hide scrollbar for IE, Edge and Firefox */
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
 }
 
 .body-container {
@@ -98,6 +96,8 @@ body {
     justify-content: center;
     align-items: center;
     padding-bottom: var(--footer-height);
+    height: calc(100vh - var(--header-footer-height));
+    overflow-y: scroll;
 }
 
 .carousel-inner > .item > img {
@@ -192,11 +192,16 @@ body {
 .contact-selector-container {
     width: 1000px;
     margin: 30px auto 0 auto;
+    transition: margin .5s ease;
 }
 
 .contact-selector-container h3 {
     padding-bottom: 10px;
     text-align: center;
+}
+
+.centered-nav {
+    margin-top: calc((100vh - var(--header-footer-height) - 282px) / 2);
 }
 
 .contact-form-container {
@@ -354,7 +359,26 @@ body {
     transition: opacity 0.1s ease-out;
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-body::-webkit-scrollbar {
-    display: none;
+::-webkit-scrollbar-thumb {
+    background-color: #c0c0c0;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a8a8a8;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #808080;
+}
+
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
 }

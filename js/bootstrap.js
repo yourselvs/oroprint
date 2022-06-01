@@ -4777,6 +4777,10 @@
         return;
       }
 
+      if ($('#contact-form-selector').hasClass('centered-nav')) {
+        $('#contact-form-selector').removeClass('centered-nav');
+      }
+
       this._deactivate(active, innerElem);
 
       this._activate(innerElem, active);
