@@ -311,22 +311,22 @@ body {
     border: none;
 }
 
-.form-floating .form-control:hover {
+.form-floating .form-control:hover:not(:focus) {
     background-color: #f3f3f3;
     box-shadow: 2px 2px 2px rgba(87, 87, 87, 0.15) inset;
+    border: none;
 }
 
-.form-floating .form-control:focus {
+.form-control:focus {
     background-color: #ffffff;
     box-shadow: 0 0 1px 1px rgba(87, 87, 87, 0.45) inset;
 }
 
-.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button {
-    background-color: #ececec
-}
-
-.form-control:hover:not(:disabled):not([readonly])::file-selector-button {
-    background-color: #ececec;
+.form-control:hover:not(:disabled):not([readonly])::-webkit-file-upload-button,
+.form-control:focus:not(:disabled):not([readonly])::-webkit-file-upload-button,
+.form-control:hover:not(:disabled):not([readonly])::file-selector-button,
+.form-control:focus:not(:disabled):not([readonly])::file-selector-button {
+    background-color: #dfdfdf
 }
 
 .form-submit-tooltip {
