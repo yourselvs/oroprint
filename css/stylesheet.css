@@ -1,6 +1,8 @@
 :root {
     --footer-height: 4rem;
     --form-width: 850px;
+    --body-background: #eeeeee;
+    --footer-color: #363636;
     --color-header-text: rgb(224, 187, 82);
     --header-footer-height: 140px;
 }
@@ -87,7 +89,7 @@
 body {
     position: relative;
     min-height: 100vh;
-    background-color: #eeeeee;
+    background-color: var(--body-background);
     color: #4a4a4a;
 }
 
@@ -95,15 +97,58 @@ body {
     min-width: min-content;
     justify-content: center;
     align-items: center;
-    padding-bottom: var(--footer-height);
     height: calc(100vh - var(--header-footer-height));
-    overflow-y: scroll;
+    overflow-y: auto;
+}
+
+.headline {
+    display: flex;
+    justify-content: right;
+    text-align: center;
+    align-items: center;
+    background-color: var(--footer-color);
+}
+
+.headline-text {
+    width: 50%;
+    color: var(--color-header-text);
+}
+
+.headline-text h1 {
+    font-weight:bolder;
+    font-size:3.7vmax;
+    text-transform: capitalize;
+}
+
+.headline-text i {
+    
+    font-weight: 100;
+}
+
+.headline-text s {
+    text-decoration-thickness: .6vh;
+    text-decoration-style: double;
+    text-decoration-color: white;
+}
+
+.headline-image-container {
+    width: 50%;
+}
+
+.headline-image {
+    background-image:
+        linear-gradient(to right, rgba(245, 246, 252, 0.52), rgba(131, 103, 19, 0.73)),
+        url('../img/tshirt_banner.jpg');
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
 }
 
 .carousel-inner > .item > img {
     min-width: 100%;
     width: 100%;
-  }
+}
+
 .samples-container {
     margin: 30px auto 0 auto;
     width:900px;
@@ -135,18 +180,18 @@ body {
 }
 
 .testimonials-row {
-    margin-top: 30px;
     background-color: #eee1b4;
 }
 
 .testimonials-container {
     padding: 30px 0;
-    width: 1100px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
     font-size: medium;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .testimonial-container {
@@ -169,9 +214,43 @@ body {
     text-align: right;
 }
 
+.catchphrase-row {
+    max-width: 750px;
+    margin: auto;
+}
+
+.hometown-row {
+    margin-top: 15px;
+}
+
+.hometown-text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: medium;
+}
+
+.contact-row {
+    margin: 30px auto;
+}
+
+.tshirt-banner-row {
+    background-image:  
+        linear-gradient(to top, rgba(245, 246, 252, 0.52), rgba(131, 103, 19, 0.73)),
+        url('../img/tshirt_banner2.jpg');
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+}
+
+.tshirt-banner-layer {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    height: 100%;
+}
+
 .footer-container {
     display: flex;
-    background-color: #363636;
+    background-color: var(--footer-color);
     text-align:center;
     color:gray;
     height: var(--footer-height);
@@ -346,7 +425,8 @@ body {
     color: white;
     font-weight: bolder;
     box-shadow: 2px 2px 2px rgba(87, 87, 87, 0.15) inset;
-    width: 12%;
+    width: fit-content;
+    padding: 6px 30px;
     justify-content: center;
 }
 
