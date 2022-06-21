@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="./css/stylesheet.css" media="screen">
 </head>
 <body>
-    <div class="sticky-top">
+    <div class="position-absolute container-fluid p-0" style="z-index: 100;">
         <header class="header-container">
             <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center">
                 <div class="container-xxl">
@@ -34,18 +34,21 @@
         </header>
     </div>
     <div class="body-container">
-        <div class="headline">
-            <div class="headline-text">
-                <h1></h1>
-                <h1>T-shirt printing for</h1>
-                <h1>
-                    <s>any</s> 
-                    <i>your</i> 
-                    organization
-                </h1>
-            </div>
-            <div class="headline-image-container">
-                <div class="headline-image"></div>
+        <div class="headline container w-100 p-0 m-0 mw-100">
+            <div class="row w-100 m-0 align-items-center">
+                <div class="col-sm-12 col-md-6 headline-text">
+                    <div>
+                        <h1 class="w-100">T-shirt printing for</h1>
+                        <h1 class="w-100">
+                            <s>any</s> 
+                            <i>your</i> 
+                            organization
+                        </h1>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 p-0">
+                    <div class="headline-image"></div>
+                </div>
             </div>
         </div>
         <div class="testimonials-row">
@@ -72,8 +75,12 @@
         </div>
         <div class="container-fluid instructions-section">
             <div class="row instructions-container-row">
+                <div class="col-sm-12 col-md-6 instructions-image-container">
+                    <div class="instructions-image">
+                    </div>
+                </div>
                 <div class="col-sm-12 col-md-6 instructions-container">
-                    <h2>How It Works</h2>
+                    <h2 class="instructions-row fw-semibold">How It Works</h2>
                     <div class="instructions-row">
                         Send in your order requirements and design files
                     </div>
@@ -85,24 +92,23 @@
                     <div class="instructions-row">
                         OROprint produces and delivers t-shirts to your exact specifications
                     </div>
-                    <div class="instructions-hr invisible"></div>
-                </div>
-                <div class="col-sm-12 col-md-6 instructions-image-container">
-                    <div class="instructions-image">
-                    </div>
+                    <!-- <div class="instructions-hr invisible"></div> -->
                 </div>
             </div>
         </div>
-        <div class="contact-row">
-            <div class="contact-text">
-                Have questions? Want to place an order?
+        <div class="calltoaction w-100">
+            <div class="calltoaction-text">
+                <div class="contact-text">
+                    Have questions? Want to place an order?
+                </div>
+                <form action="./contact/index.html">
+                    <button type="submit" class="btn form-submit">
+                        Contact Us Today
+                    </button>
+                </form>
             </div>
-            <form action="./contact/index.html">
-                <button type="submit" class="btn form-submit">
-                    Contact Us Today
-                </button>
-            </form>
         </div>
+        
         <div class="tshirt-banner-row">
             <div class="tshirt-banner-layer">
             </div>
