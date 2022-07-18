@@ -9,9 +9,9 @@
     <link rel="stylesheet" type="text/css" href="../css/stylesheet.css" media="screen">
 </head>
 <body>
-    <div class="sticky-top">
+    <div class="position-absolute container-fluid p-0" style="z-index: 100;">
         <header class="header-container">
-            <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center" aria-label="nav-bar">
+            <nav class="navbar navbar-light navbar-expand-lg bg-faded justify-content-center" aria-label="nav-bar">
                 <div class="container-xxl">
                     <div class="navbar-brand d-flex w-50 me-auto header-branding-container">
                         <div class="header-logo-container">
@@ -38,27 +38,29 @@
     </div>
     <div class="body-container">
         <div id="contact-form-selector" class="contact-selector-container centered-nav">
-            <h3>How can we help you today?</h3>
-            <div class="form-instructions">
-                <i>
-                    To get in contact with us, fill out a form below or email us directly at 
-                    <a class="external-link" href="mailto:contact@oroprintmd.com" target="_blank" rel="noopener noreferrer">
-                        contact@oroprintmd.com
-                    </a>
-                </i>
+            <div class="contact-form-header">
+                <h3>How can we help you today?</h3>
+                <div class="form-instructions">
+                    <i>
+                        To get in contact with us, fill out a form below or email us directly at 
+                        <a class="external-link" href="mailto:contact@oroprintmd.com" target="_blank" rel="noopener noreferrer">
+                            contact@oroprintmd.com
+                        </a>
+                    </i>
+                </div>
             </div>
-            <nav class="nav nav-pills flex-column flex-sm-row" aria-label="nav-form-selector">
-                <button class="form-button flex-sm-fill text-sm-center nav-link " id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
+            <nav class="nav nav-pills flex-row form-button-row" aria-label="nav-form-selector">
+                <button class="form-button flex-fill text-sm-center nav-link " id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">
                     <i class="fa-regular fa-comments fa-3x form-button-icon"></i>
                     <h4>Contact</h4>
                     <div class="form-button-content">Send us your questions and inquiries</div>
                 </button>
-                <button class="form-button flex-sm-fill text-sm-center nav-link " id="nav-order-tab" data-bs-toggle="tab" data-bs-target="#nav-order" type="button" role="tab" aria-controls="nav-order" aria-selected="false">
+                <button class="form-button flex-fill text-sm-center nav-link " id="nav-order-tab" data-bs-toggle="tab" data-bs-target="#nav-order" type="button" role="tab" aria-controls="nav-order" aria-selected="false">
                     <i class="fa-regular fa-file-lines fa-3x form-button-icon"></i>
                     <h4>Order</h4>
                     <div class="form-button-content">Submit an order for review</div>
                 </button>
-                <button class="form-button flex-sm-fill text-sm-center nav-link " id="nav-support-tab" data-bs-toggle="tab" data-bs-target="#nav-support" type="button" role="tab" aria-controls="nav-support" aria-selected="false">
+                <button class="form-button flex-fill text-sm-center nav-link " id="nav-support-tab" data-bs-toggle="tab" data-bs-target="#nav-support" type="button" role="tab" aria-controls="nav-support" aria-selected="false">
                     <i class="fa-solid fa-headset fa-3x form-button-icon"></i>
                     <h4>Support</h4>
                     <div class="form-button-content">Get help with an existing order</div>
