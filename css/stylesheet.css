@@ -476,14 +476,10 @@ body {
 }
 
 .form-button:first-of-type {
-    border-top-left-radius: .15em !important;
-    border-bottom-left-radius: .15em !important;
     margin-right: 20px;
 }
 
 .form-button:last-of-type {
-    border-top-right-radius: .15em !important;
-    border-bottom-right-radius: .15em !important;
     margin-left: 20px;
 }
 
@@ -498,6 +494,7 @@ body {
 
 .form-button h4 {
     color: var(--color-header-text);
+    font-size: calc(1rem + 0.5vw);
 }
 
 .form-button-content, .form-button-icon {
