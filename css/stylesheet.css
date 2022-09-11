@@ -497,6 +497,10 @@ body {
     font-size: calc(1rem + 0.5vw);
 }
 
+.nav-link {
+    padding: 0;
+}
+
 .form-button-content, .form-button-icon {
     color: rgb(95, 95, 95);
 }
@@ -661,6 +665,14 @@ body {
 }
 
 @media (min-width: 992px) {
+    .form-button h4 {
+        font-size: unset;
+    }
+
+    .nav-link {
+        padding: unset;
+    }
+
     .contact-selector-container {
         width: 992px;
     }
