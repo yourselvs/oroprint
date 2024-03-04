@@ -12,6 +12,24 @@
     --scrollbar-width: 15px;
 }
 
+.roboto-slab-light {
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+}
+
+.roboto-slab-regular {
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+}
+
+.roboto-slab-heavy {
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+}
+
 .header-container {
     height: var(--header-height);
 }
@@ -62,18 +80,18 @@
 .header-container .nav-link:after {
     display: block;
     content: '';
-    border-bottom: solid 2px #333;  
+    border-bottom: solid 2px #333;
     margin: 4px 1px 0 1px;
 }
 
 .header-container .nav-link:not(.active):after {
-  border-bottom: solid 2px #AAA;  
-  transform: scaleX(0);  
+  border-bottom: solid 2px #AAA;
+  transform: scaleX(0);
   transition: transform 120ms ease-in-out;
 }
 
-.header-container .nav-link:hover:after { 
-    transform: scaleX(1); 
+.header-container .nav-link:hover:after {
+    transform: scaleX(1);
 }
 
 .header-branding-container {
@@ -96,6 +114,7 @@
 }
 
 body {
+    font-family: "Kanit", sans-serif;
     position: relative;
     min-height: 100vh;
     background-color: var(--body-background);
@@ -133,13 +152,12 @@ body {
 }
 
 .headline-text h1 {
-    font-weight:bolder;
     font-size:8vmin;
     text-transform: capitalize;
 }
 
 .headline-text i {
-    font-weight: 100;
+    font-weight: 200;
 }
 
 .headline-text s {
@@ -193,7 +211,7 @@ body {
     padding: .75rem;
 }
 
-.carousel-item img {  
+.carousel-item img {
     object-fit: cover;
     object-position: center;
     overflow: hidden;
@@ -266,11 +284,15 @@ body {
 }
 
 .tshirt-banner-row {
-    background-image:  
+    background-image:
         linear-gradient(to bottom, var(--body-background-faded), rgba(131, 103, 19, 0.73)),
         url('/img/tshirtbanner.jpg');
     height: 30vh;
     background-size: cover;
+}
+
+.carousel-item img {
+    height: 75vh;
 }
 
 .instructions-section {
@@ -281,6 +303,7 @@ body {
     max-width: 992px;
     justify-content: center;
 }
+
 
 .instructions-container {
     display: flex;
@@ -302,7 +325,7 @@ body {
 .instructions-row {
     text-align: center;
     font-size: x-large;
-    font-weight: 100;
+    font-weight: 200;
     width: 74%;
 }
 
@@ -314,11 +337,11 @@ body {
     width: 30%;
     margin: 0 35%;
     border-top: 1px solid var(--footer-color);
-    
+
 }
 
 .instructions-image {
-    background-image:  
+    background-image:
         linear-gradient(to bottom, rgba(245, 246, 252, 0.42), rgba(131, 103, 19, 0.43)),
         url('/img/tshirtmodel.jpg');
     width: 100%;
@@ -390,7 +413,7 @@ body {
 .story-text {
     width: 80%;
     font-size: large;
-    font-weight: lighter;
+    font-weight: 200;
 }
 
 .story-image {
@@ -422,7 +445,7 @@ body {
 }
 
 .centered-nav {
-    margin-top: calc((100vh - var(--header-footer-height) - 282px) / 2);
+    margin-top: calc((100vh - var(--header-footer-height) - 380px) / 2);
 }
 
 .contact-form-container {
@@ -454,8 +477,7 @@ body {
 
 .form-instructions {
     text-align: center;
-    font-style: italic;
-    color: #999;
+    color: #777;
 }
 
 .form-instructions a {
@@ -490,6 +512,8 @@ body {
 
 .form-button-content {
     display: none;
+    font-weight: 400;
+    font-size: smaller;
 }
 
 .form-button h4 {
@@ -662,7 +686,7 @@ body {
 
 @media (min-width: 992px) {
     .form-button h4 {
-        font-size: unset;
+        font-size: 22px;
     }
 
     .contact-selector-container {
@@ -672,12 +696,12 @@ body {
     .form-tab {
         width: var(--form-width);
     }
-    
+
     .form-button {
         margin: 20px;
         border-radius: .15em !important;
     }
-    
+
     .contact-form-container {
         width: var(--form-width);
     }
